@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeatFit - Shape Your Ideal Body</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Landing Page Section -->
+    <section id="landing" class="active-section">
+        <nav>
+            <div class="logo">
+                <i class="fas fa-dumbbell"></i>
+                <span>NeatFit</span>
+            </div>
+            <button class="join-now">Join Now</button>
+        </nav>
+
+        <div class="hero">
+            <div class="hero-content">
+                <div class="badge">THE BEST FITNESS CLUB IN THE TOWN</div>
+                <h1 class="animate-text">SHAPE <span>YOUR</span><br>IDEAL BODY</h1>
+                <p class="animate-fade">In here we will help you to shape and build your ideal body and live up your life to fullest</p>
+
+                <!-- Achievements Section -->
+                <div class="achievements animate-fade">
+                    <div class="achievement">
+                        <i class="fas fa-trophy"></i>
+                        <span>Best Fitness App 2024</span>
+                    </div>
+                    <div class="achievement">
+                        <i class="fas fa-users"></i>
+                        <span>Community Choice Award</span>
+                    </div>
+                </div>
+
+                <div class="stats">
+                    <div class="stat">
+                        <span class="number" data-target="140">0</span>
+                        <span class="label">EXPERT COACHES</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number" data-target="978">0</span>
+                        <span class="label">MEMBERS JOINED</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number" data-target="50">0</span>
+                        <span class="label">FITNESS PROGRAMS</span>
+                    </div>
+                </div>
+
+                <!-- New: Progress Charts Section -->
+                <div class="progress-charts animate-fade">
+                    <h3>Your Fitness Journey</h3>
+                    <div class="charts-container">
+                        <div class="chart-card">
+                            <h4>Weekly Activity</h4>
+                            <canvas id="activityChart"></canvas>
+                        </div>
+                        <div class="chart-card">
+                            <h4>Fitness Goals</h4>
+                            <canvas id="goalsChart"></canvas>
+                        </div>
+                        <div class="chart-card">
+                            <h4>Monthly Progress</h4>
+                            <canvas id="progressChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Goals Tracker -->
+                <div class="goals-tracker animate-fade">
+                    <h3>Track Your Progress</h3>
+                    <div class="goal-items">
+                        <div class="goal-item">
+                            <div class="progress-circle" data-progress="75"></div>
+                            <span>Weight Goal</span>
+                        </div>
+                        <div class="goal-item">
+                            <div class="progress-circle" data-progress="60"></div>
+                            <span>Strength</span>
+                        </div>
+                        <div class="goal-item">
+                            <div class="progress-circle" data-progress="85"></div>
+                            <span>Endurance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <button class="get-started animate-button">Get Started</button>
+                    <button class="learn-more animate-button">Learn More</button>
+                </div>
+            </div>
+
+            <div class="hero-metrics">
+                <div class="heart-rate animate-pulse">
+                    <i class="fas fa-heart"></i>
+                    <span>Heart Rate</span>
+                    <span class="bpm">116 bpm</span>
+                </div>
+                <div class="calories animate-pulse">
+                    <i class="fas fa-fire"></i>
+                    <span>Calories Burned</span>
+                    <span class="kcal">220 kcal</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="hidden-section">
+        <h2 class="animate-text">EXPLORE OUR <span>PROGRAMS</span> TO SHAPE YOU</h2>
+
+        <!-- New: Benefits Section -->
+        <div class="benefits-section animate-fade">
+            <h3>Why Choose Our Programs?</h3>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-clock"></i>
+                    <h4>Flexible Schedule</h4>
+                    <p>Train at your own pace with 24/7 access</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-user-graduate"></i>
+                    <h4>Expert Guidance</h4>
+                    <p>Learn from certified fitness professionals</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Track Progress</h4>
+                    <p>Monitor your improvements in real-time</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="program-cards">
+            <div class="program-card animate-card" data-program="strength">
+                <i class="fas fa-dumbbell"></i>
+                <h3>Strength Training</h3>
+                <p>In this program, you are trained to improve your strength through many exercises.</p>
+                <!-- New: Program Details -->
+                <div class="program-details">
+                    <span class="difficulty"><i class="fas fa-signal"></i> Advanced</span>
+                    <span class="duration"><i class="fas fa-clock"></i> 12 weeks</span>
+                    <span class="equipment"><i class="fas fa-tools"></i> Full Gym</span>
+                </div>
+                <a href="#" class="join-now-link">Join Now →</a>
+            </div>
+            <div class="program-card animate-card" data-program="cardio">
+                <i class="fas fa-running"></i>
+                <h3>Cardio Training</h3>
+                <p>In this program, you are trained to do sequential moves in range of 20 until 30 minutes.</p>
+                <div class="program-details">
+                    <span class="difficulty"><i class="fas fa-signal"></i> Beginner</span>
+                    <span class="duration"><i class="fas fa-clock"></i> 8 weeks</span>
+                    <span class="equipment"><i class="fas fa-tools"></i> Minimal</span>
+                </div>
+                <a href="#" class="join-now-link">Join Now →</a>
+            </div>
+            <div class="program-card animate-card" data-program="fatburn">
+                <i class="fas fa-fire"></i>
+                <h3>Fat Burning</h3>
+                <p>This program is suitable for you who wants to get rid of your fat and lose their weight.</p>
+                <div class="program-details">
+                    <span class="difficulty"><i class="fas fa-signal"></i> Intermediate</span>
+                    <span class="duration"><i class="fas fa-clock"></i> 10 weeks</span>
+                    <span class="equipment"><i class="fas fa-tools"></i> Mixed</span>
+                </div>
+                <a href="#" class="join-now-link">Join Now →</a>
+            </div>
+            <div class="program-card animate-card" data-program="health">
+                <i class="fas fa-heart"></i>
+                <h3>Health Fitness</h3>
+                <p>This program is designed for those who exercises only for their body fitness not body building.</p>
+                <div class="program-details">
+                    <span class="difficulty"><i class="fas fa-signal"></i> Beginner</span>
+                    <span class="duration"><i class="fas fa-clock"></i> 6 weeks</span>
+                    <span class="equipment"><i class="fas fa-tools"></i> Minimal</span>
+                </div>
+                <a href="#" class="join-now-link">Join Now →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exercise Details Section -->
+    <section id="exercises" class="hidden-section">
+        <div class="back-button animate-fade">
+            <i class="fas fa-arrow-left"></i> Back to Programs
+        </div>
+        <h2 class="animate-text">YOUR <span>EXERCISE</span> PROGRAM</h2>
+        <div class="program-title"></div>
+        <div class="exercise-list"></div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
