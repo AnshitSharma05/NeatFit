@@ -68,14 +68,3 @@ neatfit/
 
 ---
 
-## 📝 Resume Project Description
-
-**NeatFit - Interactive Fitness Training Platform**
-
-A responsive web application built with vanilla HTML, CSS, and JavaScript that provides personalized fitness training programs. Key achievements:
-
-- Developed a comprehensive exercise library with video demonstrations and alternative workout options
-- Created an intuitive UI with smooth animations and responsive design, ensuring accessibility across all devices
-- Built interactive features for tracking fitness goals and visualizing progress metrics
-- Utilized modern web development practices including CSS Grid, Flexbox, and CSS animations
-
