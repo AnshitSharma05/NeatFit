@@ -1,7 +1,7 @@
 # NeatFit - Fitness Training Website
 
 A responsive fitness website built with HTML, CSS, and JavaScript that offers personalized workout programs and exercise recommendations.
-
+![alt text](image.png)
 ## 🚀 Key Features
 ### 1. Dynamic Dashboard
 - Real-time fitness metrics tracking
