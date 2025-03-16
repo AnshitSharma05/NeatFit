@@ -7,13 +7,13 @@ A responsive fitness website built with HTML, CSS, and JavaScript that offers pe
 - Real-time fitness metrics tracking
 - Interactive progress charts using Chart.js
 - Animated statistics and achievements display
-
+![alt text](image-1.png)
 ### 2. Comprehensive Workout Programs
 - Strength Training Program
 - Cardio Training Program
 - Fat Burning Program
 - Health Fitness Program
-
+![alt text](image-2.png)
 ### 3. Exercise Library
 - Detailed video demonstrations
 - Equipment and no-equipment alternatives
