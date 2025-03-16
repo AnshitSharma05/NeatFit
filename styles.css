@@ -1,0 +1,707 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+:root {
+    --primary-color: #ff8c00;
+    --secondary-color: #ff4500;
+    --dark-bg: #1a1a1a;
+    --light-text: #ffffff;
+    --gray-text: #888888;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    line-height: 1.6;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    background: rgba(26, 26, 26, 0.9);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--light-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+}
+
+.join-now {
+    background: var(--primary-color);
+    color: var(--light-text);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.join-now:hover {
+    background: var(--secondary-color);
+}
+
+/* Hero Section Styles */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    padding: 7rem 4rem 4rem;
+    position: relative;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.badge {
+    background: rgba(255, 140, 0, 0.1);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+h1 span {
+    color: var(--primary-color);
+}
+
+.stats {
+    display: flex;
+    gap: 3rem;
+    margin: 2rem 0;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.label {
+    color: var(--gray-text);
+    font-size: 0.9rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.get-started, .learn-more {
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.get-started {
+    background: var(--primary-color);
+    color: var(--light-text);
+    border: none;
+}
+
+.learn-more {
+    background: transparent;
+    color: var(--light-text);
+    border: 1px solid var(--light-text);
+}
+
+.get-started:hover {
+    background: var(--secondary-color);
+}
+
+.learn-more:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Hero Metrics */
+.hero-metrics {
+    position: absolute;
+    right: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.heart-rate, .calories {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s;
+}
+
+.heart-rate i, .calories i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.heart-rate:hover, .calories:hover {
+    transform: translateY(-5px);
+}
+
+/* Programs Section */
+#programs {
+    padding: 4rem;
+}
+
+.program-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.program-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.program-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: -1;
+    border-radius: 8px;
+}
+
+.program-card:hover::before {
+    opacity: 1;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.program-card i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.program-card h3 {
+    margin-bottom: 1rem;
+}
+
+.join-now-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: color 0.3s;
+}
+
+.program-card:hover .join-now-link {
+    color: var(--light-text);
+}
+
+/* Exercise Section */
+#exercises {
+    padding: 4rem;
+}
+
+.back-button {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.exercise-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.exercise-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: transform 0.3s;
+    margin-bottom: 2rem;
+}
+
+.exercise-card:hover {
+    transform: translateY(-5px);
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    margin-bottom: 1.5rem;
+}
+
+.exercise-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.exercise-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+
+.exercise-alternative {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.exercise-alternative h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .exercise-main {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .exercise-details {
+        grid-column: 1 / -1;
+    }
+
+    .exercise-alternative {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .exercise-alternative h4 {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Section Visibility */
+.hidden-section {
+    display: none;
+}
+
+.active-section {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .hero {
+        padding: 8rem 1rem 2rem;
+        flex-direction: column;
+    }
+
+    .hero-content {
+        padding-right: 0;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-metrics {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    #programs, #exercises {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scale {
+    from {
+        transform: scale(0.95);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.animate-scale {
+    animation: scale 0.4s ease-out forwards;
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+.animate-fade {
+    opacity: 0;
+    animation: fadeUp 0.6s ease-out forwards;
+}
+
+.animate-button {
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.animate-button:hover {
+    transform: translateY(-2px);
+}
+
+.animate-text {
+    opacity: 0;
+    animation: fadeUp 0.6s ease-out forwards;
+}
+
+.animate-card {
+    opacity: 0;
+    animation: fadeUp 0.6s ease-out forwards;
+}
+
+/* Adding new styles for the achievements section */
+.achievements {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.achievement {
+    background: rgba(255, 140, 0, 0.1);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s;
+}
+
+.achievement:hover {
+    transform: translateY(-5px);
+}
+
+.achievement i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+/* Goals Tracker Styles */
+.goals-tracker {
+    margin: 2rem 0;
+}
+
+.goals-tracker h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.goal-items {
+    display: flex;
+    gap: 2rem;
+}
+
+.goal-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.progress-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: conic-gradient(var(--primary-color) var(--progress), rgba(255, 255, 255, 0.1) var(--progress));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.progress-circle::before {
+    content: attr(data-progress)'%';
+    position: absolute;
+    font-size: 0.8rem;
+    color: var(--light-text);
+}
+
+/* Benefits Section Styles */
+.benefits-section {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.benefits-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-card i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.benefit-card h4 {
+    margin-bottom: 1rem;
+}
+
+/* Program Details Styles */
+.program-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.program-details span {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.program-details i {
+    font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .achievements {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .goal-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Additional animations */
+@keyframes progressFill {
+    from {
+        --progress: 0%;
+    }
+    to {
+        --progress: var(--target-progress);
+    }
+}
+
+.progress-circle {
+    animation: progressFill 1.5s ease-out forwards;
+}
+
+/* Update existing animations for new components */
+.animate-fade {
+    opacity: 0;
+    animation: fadeUp 0.6s ease-out forwards;
+}
+
+.animate-scale {
+    animation: scale 0.4s ease-out forwards;
+}
+
+.achievement, .goal-item, .benefit-card {
+    opacity: 0;
+    animation: fadeUp 0.6s ease-out forwards;
+}
+
+/* Stagger animations for cards */
+.benefit-card:nth-child(1) { animation-delay: 0.2s; }
+.benefit-card:nth-child(2) { animation-delay: 0.4s; }
+.benefit-card:nth-child(3) { animation-delay: 0.6s; }
+
+
+/* Add these new styles for charts after your existing CSS */
+
+.progress-charts {
+    margin: 3rem 0;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+.progress-charts h3 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.charts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.chart-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.chart-card:hover {
+    transform: translateY(-5px);
+}
+
+.chart-card h4 {
+    color: var(--light-text);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+canvas {
+    width: 100% !important;
+    height: 200px !important;
+}
+
+/* Responsive adjustments for charts */
+@media (max-width: 768px) {
+    .charts-container {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-card {
+        margin-bottom: 1rem;
+    }
+}
